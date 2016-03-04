@@ -1,0 +1,16 @@
+<h1>Nuevo plato</h1>
+<%= form_for :plato, url: platos_path do |f| %>
+  <p>
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </p>
+ 
+  <!-- <p>
+    <%= f.label :contenido %><br>
+    <%= f.text_area :contenido %>
+  </p> -->
+ 
+  <p>
+    <%= f.submit 'Guardar Plato' %>
+  </p>
+<% end %>
