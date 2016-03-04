@@ -1,5 +1,5 @@
 class SiteController < ApplicationController
-	def home
-		render 'home'
+	def index
+		render 'index'
 	end
 end
