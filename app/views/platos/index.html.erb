@@ -1,0 +1,13 @@
+<h1>Listando Platos</h1>
+ 
+<table>
+  <tr>
+    <th>Nombre</th>
+  </tr>
+ 
+  <% @platos.each do |plato| %>
+    <tr>
+      <td><%= plato.nombre %></td>
+    </tr>
+  <% end %>
+</table>
