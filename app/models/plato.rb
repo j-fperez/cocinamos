@@ -1,3 +1,3 @@
 class Plato < ActiveRecord::Base
-	set_table_name 'platos'
+	#set_table_name 'platos'
 end

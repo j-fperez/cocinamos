@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   resources :platos
+  get '/' => 'site#index'
   get '/index' => 'site#index'
   get 'index/platos/new' => 'platos#new'
-  post '/index/platos/new '
+  post '/index/platos/new'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
