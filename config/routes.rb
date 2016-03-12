@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :platos
-  get '/' => 'site#index'
+  root to: 'site#index'
   get '/index' => 'site#index'
   get 'index/platos/new' => 'platos#new'
   post '/index/platos/new'

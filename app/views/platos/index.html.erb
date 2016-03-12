@@ -3,11 +3,18 @@
 <table>
   <tr>
     <th>Nombre</th>
+    <th>Receta</th>
+    <th colspan="2"></th>
   </tr>
  
   <% @platos.each do |plato| %>
     <tr>
       <td><%= plato.nombre %></td>
+      <td><%= plato.receta %></td>
+      <td><%= link_to 'Ver', plato_path(plato) %></td>
+      <td><%= link_to 'Editar', edit_plato_path(plato) %></td>
     </tr>
   <% end %>
 </table>
+
+<%= link_to 'Volver', index_path %>

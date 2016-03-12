@@ -1,0 +1,28 @@
+<%= form_for @plato do |f| %>
+
+	<% if @plato.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@plato.errors.count, "error") %> han impedido que el artículo sea grabado:</h2>
+			<ul>
+				<% @plato.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+					<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+	<p>
+		<%= f.label :nombre %><br>
+		<%= f.text_field :nombre %>
+	</p>
+
+	<p>
+		<%= f.label :receta %><br>
+		<%= f.text_area :receta %>
+	</p>
+
+	<p>
+		<%= f.submit 'Guardar Plato' %>
+	</p>
+
+<% end %>

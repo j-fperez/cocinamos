@@ -2,3 +2,11 @@
 	<strong>Nombre del plato:</strong>
 	<%= @plato.nombre %>
 </p>
+
+<p>
+	<strong>Receta del plato:</strong>
+	<%= @plato.receta %>
+</p>
+
+<%= link_to 'Volver', index_path %>
+<%= link_to 'Editar', edit_plato_path %>
