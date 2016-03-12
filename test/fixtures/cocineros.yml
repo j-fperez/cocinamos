@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre_cocinero: MyString
+  apellido_1_cocinero: MyString
+  apellido_2_cocinero: MyString
+  dni_cocinero: MyString
+  alias_cocinero: MyString
+
+two:
+  nombre_cocinero: MyString
+  apellido_1_cocinero: MyString
+  apellido_2_cocinero: MyString
+  dni_cocinero: MyString
+  alias_cocinero: MyString

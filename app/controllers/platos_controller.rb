@@ -37,6 +37,13 @@ class PlatosController < ApplicationController
 		end
 	end
 	
+	def destroy
+		@plato = Plato.find(params[:id])
+		@plato.destroy
+
+		redirect_to platos_path
+	end
+
 	private
 	def plato_params
 		params.require(:plato).permit(:nombre, :receta)		

@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160311082641) do
+ActiveRecord::Schema.define(version: 20160312112003) do
+
+  create_table "cocineros", force: :cascade do |t|
+    t.string   "nombre_cocinero"
+    t.string   "apellido_1_cocinero"
+    t.string   "apellido_2_cocinero"
+    t.string   "dni_cocinero"
+    t.string   "alias_cocinero"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
 
   create_table "platos", force: :cascade do |t|
     t.string   "nombre"

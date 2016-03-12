@@ -4,7 +4,7 @@
   <tr>
     <th>Nombre</th>
     <th>Receta</th>
-    <th colspan="2"></th>
+    <th colspan="3"></th>
   </tr>
  
   <% @platos.each do |plato| %>
@@ -13,6 +13,7 @@
       <td><%= plato.receta %></td>
       <td><%= link_to 'Ver', plato_path(plato) %></td>
       <td><%= link_to 'Editar', edit_plato_path(plato) %></td>
+      <td><%= link_to 'Borrar', plato_path(plato), method: :delete, data: { confirm: '¿Estàs seguro?' } %></td>
     </tr>
   <% end %>
 </table>
