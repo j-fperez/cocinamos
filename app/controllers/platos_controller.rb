@@ -45,7 +45,7 @@ class PlatosController < ApplicationController
 	end
 
 	private
-	def plato_params
-		params.require(:plato).permit(:nombre, :receta)		
-	end
+		def plato_params
+			params.require(:plato).permit(:nombre, :receta)		
+		end
 end

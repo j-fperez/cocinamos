@@ -1,0 +1,24 @@
+<h1>Listando Cocineros</h1>
+
+<table>
+	<tr>
+		<th>Nombre</th>
+		<th>Apellido 1</th>
+		<th>Apellido 2</th>
+		<th>DNI</th>
+		<th>Alias</th>
+	</tr>
+
+	<% @cocineros.each do |cocinero| %>
+		<tr>
+			<td><%= cocinero.nombre_cocinero %></td>
+			<td><%= cocinero.apellido_1_cocinero %></td>
+			<td><%= cocinero.apellido_2_cocinero %></td>
+			<td><%= cocinero.dni_cocinero %></td>
+			<td><%= cocinero.alias_cocinero %></td>
+		</tr>
+	<% end %>
+</table>
+
+<%= link_to 'Volver', cocineros_path %> |
+<%= link_to 'Editar', edit_cocinero_path(@cocinero) %>

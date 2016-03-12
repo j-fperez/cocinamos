@@ -1,0 +1,32 @@
+<h1>Nuevo Cocinero</h1>
+
+<%= form_for :cocinero, url: cocineros_path do |f| %>
+	<p>
+		<%= f.label :nombre_cocinero %><br>
+		<%= f.text_field :nombre_cocinero %>
+	</p>
+
+	<p>
+		<%= f.label :apellido_1_cocinero %><br>
+		<%= f.text_field :apellido_1_cocinero %>
+	</p>
+
+	<p>
+		<%= f.label :apellido_2_cocinero %><br>
+		<%= f.text_field :apellido_2_cocinero %>
+	</p>
+
+	<p>
+		<%= f.label :dni_cocinero %><br>
+		<%= f.text_field :dni_cocinero %>
+	</p>
+
+	<p>
+		<%= f.label :alias_cocinero %><br>
+		<%= f.text_field :alias_cocinero %>
+	</p>
+
+	<p>
+		<%= f.submit 'Guardar Cocinero' %>
+	</p>
+	<% end %>

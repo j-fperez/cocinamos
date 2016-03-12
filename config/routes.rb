@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   get '/index' => 'site#index'
   get 'index/platos/new' => 'platos#new'
   post '/index/platos/new'
+
+  get 'index/cocineros/new' =>'cocineros#new'
+  post '/index/cocineros/new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
