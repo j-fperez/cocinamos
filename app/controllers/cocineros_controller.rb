@@ -1,0 +1,2 @@
+class CocinerosController < ApplicationController
+end
