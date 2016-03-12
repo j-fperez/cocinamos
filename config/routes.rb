@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :platos
+  resources :platos, :cocineros
   root to: 'site#index'
   get '/index' => 'site#index'
   get 'index/platos/new' => 'platos#new'
