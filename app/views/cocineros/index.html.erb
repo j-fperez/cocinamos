@@ -7,6 +7,7 @@
 		<th>Apellido 2</th>
 		<th>DNI</th>
 		<th>Alias</th>
+		<th colspan="5"></th>
 	</tr>
 
 	<% @cocineros.each do |cocinero| %>
@@ -16,9 +17,11 @@
 			<td><%= cocinero.apellido_2_cocinero %></td>
 			<td><%= cocinero.dni_cocinero %></td>
 			<td><%= cocinero.alias_cocinero %></td>
+			<td><%= link_to 'Ver', cocinero_path(cocinero) %></td>
+      		<td><%= link_to 'Editar', edit_cocinero_path(cocinero) %></td>
+      		<td><%= link_to 'Borrar', cocinero_path(cocinero), method: :delete, data: { confirm: '¿Estàs seguro?' } %></td>
 		</tr>
 	<% end %>
 </table>
 
-<%= link_to 'Volver', cocineros_path %> |
-<%= link_to 'Editar', edit_cocinero_path(@cocinero) %>
+<%= link_to 'Volver', index_path %> |

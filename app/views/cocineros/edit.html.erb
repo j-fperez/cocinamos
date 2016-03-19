@@ -1,0 +1,48 @@
+<h1>Estas editando un Cocinero</h1>
+<%= form_for :cocinero, url: cocinero_path(@cocinero), method: :patch do |f| %>
+
+	<% if @cocinero.errors.any? %>
+	<div id="error_explanation">
+		<h2>
+			<%= pluralize(@cocinero.errors.count, "error") %> han impedido que el cocinero sea grabado:</h2>
+		</h2>
+		<ul>
+			<% @cocinero.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+			<% end %>
+		</ul>
+	</div>
+<% end %>
+
+<p>
+	<%= f.label :nombre_cocinero %><br>
+	<%= f.text_field :nombre_cocinero %>
+</p>
+
+<p>
+	<%= f.label :apellido_1_cocinero %><br>
+	<%= f.text_area :apellido_1_cocinero %>
+</p>
+
+<p>
+	<%= f.label :apellido_2_cocinero %><br>
+	<%= f.text_area :apellido_2_cocinero %>
+</p>
+
+<p>
+	<%= f.label :dni_cocinero %><br>
+	<%= f.text_area :dni_cocinero %>
+</p>
+
+<p>
+	<%= f.label :alias_cocinero %><br>
+	<%= f.text_area :alias_cocinero %>
+</p>
+
+<p>
+	<%= f.submit 'Guardar Cocinero' %>
+</P>
+
+<% end %>
+
+<%= link_to 'Volver', cocineros_path %>
